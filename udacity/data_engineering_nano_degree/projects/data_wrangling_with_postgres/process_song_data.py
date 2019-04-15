@@ -45,14 +45,8 @@ def process_log_file(cur, filepath):
         time_data = row['ts'], row['ts_datetime'].hour, row['ts_datetime'].day, row['ts_datetime'].week, row['ts_datetime'].year, row['ts_datetime'].weekday()
         cur.execute(time_table_insert, time_data)
 
-
-
-    # cur.execute(time_table_insert, time_data)
-
-    # cur.execute(time_table_insert, user_data)
-
-
-
+        user_data = row['userId'], row['firstName'], row['lastName'], row['gender'], row['level']
+        cur.execute(user_table_insert, user_data)
 
 def process_data(cur, conn, filepath, func):
     # get all files matching extension from directory
