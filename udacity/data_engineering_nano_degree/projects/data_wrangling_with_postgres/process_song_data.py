@@ -47,6 +47,19 @@ def process_log_file(cur, filepath):
         user_data = row['userId'], row['firstName'], row['lastName'], row['gender'], row['level']
         cur.execute(user_table_insert, user_data)
 
+        # get songid and artistid from song and artist tables
+        cur.execute(song_select, (row.song, row.artist, row.length))
+        results = cur.fetchone()
+
+        if results:
+            songid, artistid = results
+        else:
+            songid, artistid = None, None
+
+        # insert songplay record
+        songplay_data = songid, row['ts'], row['userId'], row['level'], songid, artistid, row['sessionId'], row['location'], row['userAgent']
+        cur.execute(songplay_table_insert, songplay_data)
+
 def process_data(cur, conn, filepath, func):
     # get all files matching extension from directory
     all_files = []
