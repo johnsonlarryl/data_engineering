@@ -14,11 +14,11 @@ def process_song_file(cur, filepath):
 
     # insert song record
     song_data = df['song_id'][0], df['title'][0], df['artist_id'][0], int(df['year'][0]), float(df['duration'][0])
-    cur.execute(song_table_insert, song_data)
+    # cur.execute(song_table_insert, song_data)
 
     # insert artist record
-    # artist_data =
-    # cur.execute(artist_table_insert, artist_data)
+    artist_data = df['artist_id'][0], df['artist_name'][0], df['artist_location'][0], df['artist_latitude'][0], df['artist_longitude'][0]
+    cur.execute(artist_table_insert, artist_data)
 
 def process_data(cur, conn, filepath, func):
     # get all files matching extension from directory
