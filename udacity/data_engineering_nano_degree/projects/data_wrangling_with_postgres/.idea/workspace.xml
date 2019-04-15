@@ -14,8 +14,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/data_wrangling_with_postgres$process_song_data.coverage" NAME="process_song_data Coverage Results" MODIFIED="1555296494553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/data_wrangling_with_postgres$create_tables.coverage" NAME="create_tables Coverage Results" MODIFIED="1555296482794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/data_wrangling_with_postgres$process_song_data.coverage" NAME="process_song_data Coverage Results" MODIFIED="1555297849288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/data_wrangling_with_postgres$create_tables.coverage" NAME="create_tables Coverage Results" MODIFIED="1555297843181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -25,9 +25,9 @@
     <favorites_list name="data_wrangling_with_postgres" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.67561984">
+    <splitter split-orientation="vertical" split-proportion="0.3432836">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.31123737">
+        <splitter split-orientation="horizontal" split-proportion="0.42271292">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="create_tables.py" pinned="false" current-in-tab="false">
@@ -45,25 +45,28 @@
               <file leaf-file-name="sql_queries.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/sql_queries.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.74538743">
-                      <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+                    <state vertical-scroll-proportion="4.4680853">
+                      <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
                       <folding>
-                        <marker date="1555295828882" expanded="true" signature="38:68" placeholder="DROP TABLE I... " />
-                        <marker date="1555295828882" expanded="true" signature="89:115" placeholder="DROP TABLE I... " />
-                        <marker date="1555295828882" expanded="true" signature="136:162" placeholder="DROP TABLE I... " />
-                        <marker date="1555295828882" expanded="true" signature="185:213" placeholder="DROP TABLE I... " />
-                        <marker date="1555295828882" expanded="true" signature="234:259" placeholder="DROP TABLE I... " />
-                        <marker date="1555295828882" expanded="true" signature="308:505" placeholder="CREATE TABLE... songplays" />
-                        <marker date="1555295828882" expanded="true" signature="308:512" placeholder="CREATE TABLE... NOT" />
-                        <marker date="1555295828882" expanded="true" signature="544:661" placeholder="CREATE TABLE... NOT" />
-                        <marker date="1555295828882" expanded="true" signature="693:811" placeholder="CREATE TABLE... NOT" />
-                        <marker date="1555295828882" expanded="true" signature="845:965" placeholder="CREATE TABLE... NOT" />
-                        <marker date="1555295828882" expanded="true" signature="997:1128" placeholder="CREATE TABLE... NOT" />
-                        <marker date="1555295828882" expanded="true" signature="1182:1528" placeholder="INSERT INTO items_purchased... " />
-                        <marker date="1555295828882" expanded="true" signature="1560:1729" placeholder="INSERT INTO users... " />
-                        <marker date="1555295828882" expanded="true" signature="1761:1926" placeholder="INSERT INTO songs... " />
-                        <marker date="1555295828882" expanded="true" signature="1960:2140" placeholder="INSERT INTO artists... " />
-                        <marker date="1555295828882" expanded="true" signature="2173:2356" placeholder="INSERT INTO time... " />
+                        <marker date="1555297842028" expanded="true" signature="38:68" placeholder="DROP TABLE I... " />
+                        <marker date="1555297842028" expanded="true" signature="89:115" placeholder="DROP TABLE I... " />
+                        <marker date="1555297842028" expanded="true" signature="136:162" placeholder="DROP TABLE I... " />
+                        <marker date="1555297842028" expanded="true" signature="185:213" placeholder="DROP TABLE I... " />
+                        <marker date="1555297842028" expanded="true" signature="234:259" placeholder="DROP TABLE I... " />
+                        <marker date="1555297842028" expanded="true" signature="308:505" placeholder="CREATE TABLE... songplays" />
+                        <marker date="1555297842028" expanded="true" signature="308:512" placeholder="CREATE TABLE... NOT" />
+                        <marker date="1555297842028" expanded="true" signature="544:673" placeholder="CREATE TABLE... IF" />
+                        <marker date="1555297842028" expanded="true" signature="705:856" placeholder="CREATE TABLE... NOT" />
+                        <marker date="1555297842028" expanded="true" signature="890:1022" placeholder="CREATE TABLE... IF" />
+                        <marker date="1555297842028" expanded="true" signature="1054:1185" placeholder="CREATE TABLE... NOT" />
+                        <marker date="1555297842028" expanded="true" signature="1239:1585" placeholder="INSERT INTO items_purchased... " />
+                        <marker date="1555297842028" expanded="true" signature="1617:1786" placeholder="INSERT INTO users... " />
+                        <marker date="1555297842028" expanded="true" signature="1617:1819" placeholder="INSERT INTO users... " />
+                        <marker date="1555297842028" expanded="true" signature="1851:2016" placeholder="INSERT INTO songs... " />
+                        <marker date="1555297842028" expanded="true" signature="1851:2060" placeholder="INSERT INTO songs... " />
+                        <marker date="1555297842028" expanded="true" signature="2094:2274" placeholder="INSERT INTO artists... " />
+                        <marker date="1555297842028" expanded="true" signature="2094:2309" placeholder="INSERT INTO artists... " />
+                        <marker date="1555297842028" expanded="true" signature="2342:2525" placeholder="INSERT INTO time... " />
                       </folding>
                     </state>
                   </provider>
@@ -97,8 +100,8 @@
               <file leaf-file-name="process_song_data.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/process_song_data.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.69372696">
-                      <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                    <state vertical-scroll-proportion="2.2659574">
+                      <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                       <folding>
                         <element signature="e#0#9#0" expanded="true" />
                       </folding>
@@ -145,8 +148,8 @@
           <file leaf-file-name="2018-11-01-events.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data/log_data/2018/11/2018-11-01-events.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3846154">
-                  <caret line="2" column="137" selection-start-line="2" selection-start-column="132" selection-end-line="2" selection-end-column="137" />
+                <state vertical-scroll-proportion="0.28985506">
+                  <caret line="4" column="154" selection-start-line="4" selection-start-column="154" selection-end-line="4" selection-end-column="154" />
                   <folding />
                 </state>
               </provider>
@@ -169,8 +172,8 @@
         <option value="$PROJECT_DIR$/create_tables.py" />
         <option value="$PROJECT_DIR$/data/song_data/A/A/C/TRAACOW128F933E35F.json" />
         <option value="$PROJECT_DIR$/test.ipynb" />
-        <option value="$PROJECT_DIR$/sql_queries.py" />
         <option value="$PROJECT_DIR$/process_song_data.py" />
+        <option value="$PROJECT_DIR$/sql_queries.py" />
       </list>
     </option>
   </component>
@@ -557,15 +560,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.079558656" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39528432" sideWeight="0.5092915" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.49535424" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39528432" sideWeight="0.49070847" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.026352288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3772538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.49303135" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -590,9 +593,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/create_tables.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/process_song_data.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/process_song_data.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/process_song_data.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -602,7 +615,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -622,22 +635,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
           <folding>
-            <marker date="1555295828882" expanded="true" signature="38:68" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="89:115" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="136:162" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="185:213" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="234:259" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="308:505" placeholder="CREATE TABLE... songplays" />
-            <marker date="1555295828882" expanded="true" signature="308:512" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="544:661" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="693:811" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="845:965" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="997:1128" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="1182:1528" placeholder="INSERT INTO items_purchased... " />
-            <marker date="1555295828882" expanded="true" signature="1560:1729" placeholder="INSERT INTO users... " />
-            <marker date="1555295828882" expanded="true" signature="1761:1926" placeholder="INSERT INTO songs... " />
-            <marker date="1555295828882" expanded="true" signature="1960:2140" placeholder="INSERT INTO artists... " />
-            <marker date="1555295828882" expanded="true" signature="2173:2356" placeholder="INSERT INTO time... " />
+            <marker date="1555297842028" expanded="true" signature="38:68" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="89:115" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="136:162" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="185:213" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="234:259" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="308:505" placeholder="CREATE TABLE... songplays" />
+            <marker date="1555297842028" expanded="true" signature="308:512" placeholder="CREATE TABLE... NOT" />
+            <marker date="1555297842028" expanded="true" signature="544:673" placeholder="CREATE TABLE... IF" />
+            <marker date="1555297842028" expanded="true" signature="705:856" placeholder="CREATE TABLE... NOT" />
+            <marker date="1555297842028" expanded="true" signature="890:1022" placeholder="CREATE TABLE... IF" />
+            <marker date="1555297842028" expanded="true" signature="1054:1185" placeholder="CREATE TABLE... NOT" />
+            <marker date="1555297842028" expanded="true" signature="1239:1585" placeholder="INSERT INTO items_purchased... " />
+            <marker date="1555297842028" expanded="true" signature="1617:1786" placeholder="INSERT INTO users... " />
+            <marker date="1555297842028" expanded="true" signature="1617:1819" placeholder="INSERT INTO users... " />
+            <marker date="1555297842028" expanded="true" signature="1851:2016" placeholder="INSERT INTO songs... " />
+            <marker date="1555297842028" expanded="true" signature="1851:2060" placeholder="INSERT INTO songs... " />
+            <marker date="1555297842028" expanded="true" signature="2094:2274" placeholder="INSERT INTO artists... " />
+            <marker date="1555297842028" expanded="true" signature="2094:2309" placeholder="INSERT INTO artists... " />
+            <marker date="1555297842028" expanded="true" signature="2342:2525" placeholder="INSERT INTO time... " />
           </folding>
         </state>
       </provider>
@@ -936,45 +952,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql_queries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74538743">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <marker date="1555295828882" expanded="true" signature="38:68" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="89:115" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="136:162" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="185:213" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="234:259" placeholder="DROP TABLE I... " />
-            <marker date="1555295828882" expanded="true" signature="308:505" placeholder="CREATE TABLE... songplays" />
-            <marker date="1555295828882" expanded="true" signature="308:512" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="544:661" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="693:811" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="845:965" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="997:1128" placeholder="CREATE TABLE... NOT" />
-            <marker date="1555295828882" expanded="true" signature="1182:1528" placeholder="INSERT INTO items_purchased... " />
-            <marker date="1555295828882" expanded="true" signature="1560:1729" placeholder="INSERT INTO users... " />
-            <marker date="1555295828882" expanded="true" signature="1761:1926" placeholder="INSERT INTO songs... " />
-            <marker date="1555295828882" expanded="true" signature="1960:2140" placeholder="INSERT INTO artists... " />
-            <marker date="1555295828882" expanded="true" signature="2173:2356" placeholder="INSERT INTO time... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/log_data/2018/11/2018-11-01-events.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3846154">
-          <caret line="2" column="137" selection-start-line="2" selection-start-column="132" selection-end-line="2" selection-end-column="137" />
+        <state vertical-scroll-proportion="0.28985506">
+          <caret line="4" column="154" selection-start-line="4" selection-start-column="154" selection-end-line="4" selection-end-column="154" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/process_song_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69372696">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.2659574">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_queries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.4680853">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <marker date="1555297842028" expanded="true" signature="38:68" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="89:115" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="136:162" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="185:213" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="234:259" placeholder="DROP TABLE I... " />
+            <marker date="1555297842028" expanded="true" signature="308:505" placeholder="CREATE TABLE... songplays" />
+            <marker date="1555297842028" expanded="true" signature="308:512" placeholder="CREATE TABLE... NOT" />
+            <marker date="1555297842028" expanded="true" signature="544:673" placeholder="CREATE TABLE... IF" />
+            <marker date="1555297842028" expanded="true" signature="705:856" placeholder="CREATE TABLE... NOT" />
+            <marker date="1555297842028" expanded="true" signature="890:1022" placeholder="CREATE TABLE... IF" />
+            <marker date="1555297842028" expanded="true" signature="1054:1185" placeholder="CREATE TABLE... NOT" />
+            <marker date="1555297842028" expanded="true" signature="1239:1585" placeholder="INSERT INTO items_purchased... " />
+            <marker date="1555297842028" expanded="true" signature="1617:1786" placeholder="INSERT INTO users... " />
+            <marker date="1555297842028" expanded="true" signature="1617:1819" placeholder="INSERT INTO users... " />
+            <marker date="1555297842028" expanded="true" signature="1851:2016" placeholder="INSERT INTO songs... " />
+            <marker date="1555297842028" expanded="true" signature="1851:2060" placeholder="INSERT INTO songs... " />
+            <marker date="1555297842028" expanded="true" signature="2094:2274" placeholder="INSERT INTO artists... " />
+            <marker date="1555297842028" expanded="true" signature="2094:2309" placeholder="INSERT INTO artists... " />
+            <marker date="1555297842028" expanded="true" signature="2342:2525" placeholder="INSERT INTO time... " />
           </folding>
         </state>
       </provider>

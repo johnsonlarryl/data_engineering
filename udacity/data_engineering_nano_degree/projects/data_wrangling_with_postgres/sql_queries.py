@@ -24,7 +24,7 @@ user_agent TEXT
 
 user_table_create = ("""
 CREATE TABLE IF NOT EXISTS users (
-user_id SMALLINT,
+user_id SMALLINT PRIMARY KEY,
 first_name TEXT,
 last_name TEXT,
 gender CHAR(1),
@@ -38,13 +38,14 @@ song_id CHAR(18),
 title TEXT,
 artist_id CHAR(18),
 year SMALLINT,
-duration NUMERIC
+duration NUMERIC,
+PRIMARY KEY(song_id, artist_id)
 )
 """)
 
 artist_table_create = ("""
 CREATE TABLE IF NOT EXISTS artists (
-artist_id CHAR(18),
+artist_id CHAR(18) PRIMARY KEY,
 name TEXT,
 location TEXT,
 latitude NUMERIC,
@@ -85,6 +86,8 @@ INSERT INTO users (user_id,
                    gender,
                    level)
 VALUES (%s, %s, %s, %s, %s)
+ON CONFLICT (user_id)
+DO NOTHING
 """)
 
 song_table_insert = ("""
@@ -94,6 +97,8 @@ INSERT INTO songs (song_id,
                    year,
                    duration)
 VALUES (%s, %s, %s, %s, %s)
+ON CONFLICT (song_id, artist_id)
+DO NOTHING
 """)
 
 artist_table_insert = ("""
@@ -103,6 +108,8 @@ INSERT INTO artists (artist_id,
                      latitude,
                      longitude)
 VALUES (%s, %s, %s, %s, %s)
+ON CONFLICT (artist_id)
+DO NOTHING
 """)
 
 

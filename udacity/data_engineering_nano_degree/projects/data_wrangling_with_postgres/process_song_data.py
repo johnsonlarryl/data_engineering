@@ -5,20 +5,19 @@ import pandas as pd
 from sql_queries import *
 import json
 
-
-# open song file
 def open_file(filepath, multi_line):
     with open(filepath, 'r') as file:
         if multi_line:
             data = list()
             for lines in file:
                 data.append(json.loads(lines))
+
+            df = pd.DataFrame(data)
         else:
             data = json.load(file)
+            df = pd.DataFrame(data, index=[0])
 
-
-    # return pd.DataFrame(data, index=[0])
-    return pd.DataFrame(data)
+    return df
 
 
 def process_song_file(cur, filepath):
@@ -70,7 +69,7 @@ def main():
     conn = psycopg2.connect("host=localhost dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 
-    # process_data(cur, conn, filepath='data/song_data', func=process_song_file)
+    process_data(cur, conn, filepath='data/song_data', func=process_song_file)
     process_data(cur, conn, filepath='data/log_data', func=process_log_file)
 
     conn.close()
