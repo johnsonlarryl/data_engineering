@@ -6,19 +6,53 @@ from sql_queries import *
 import json
 
 
+# open song file
+def open_file(filepath, multi_line):
+    with open(filepath, 'r') as file:
+        if multi_line:
+            data = list()
+            for lines in file:
+                data.append(json.loads(lines))
+        else:
+            data = json.load(file)
+
+
+    # return pd.DataFrame(data, index=[0])
+    return pd.DataFrame(data)
+
+
 def process_song_file(cur, filepath):
-    with open(filepath, 'r') as f:
-        data = json.load(f)
     # open song file
-    df = pd.DataFrame(data, index=[0])
+    df = open_file(filepath, False)
 
     # insert song record
     song_data = df['song_id'][0], df['title'][0], df['artist_id'][0], int(df['year'][0]), float(df['duration'][0])
-    # cur.execute(song_table_insert, song_data)
+    cur.execute(song_table_insert, song_data)
 
     # insert artist record
     artist_data = df['artist_id'][0], df['artist_name'][0], df['artist_location'][0], df['artist_latitude'][0], df['artist_longitude'][0]
     cur.execute(artist_table_insert, artist_data)
+
+def process_log_file(cur, filepath):
+    # open log file
+    df = open_file(filepath, True)
+
+    is_next_song = df['page'] == 'NextSong'
+    df_is_next_song_df = df[is_next_song]
+    df_is_next_song_df['ts_datetime'] = pd.to_datetime(df_is_next_song_df['ts'],unit='ms')
+
+    for i, row in df_is_next_song_df.iterrows():
+        time_data = row['ts'], row['ts_datetime'].hour, row['ts_datetime'].day, row['ts_datetime'].week, row['ts_datetime'].year, row['ts_datetime'].weekday()
+        cur.execute(time_table_insert, time_data)
+
+
+
+    # cur.execute(time_table_insert, time_data)
+
+    # cur.execute(time_table_insert, user_data)
+
+
+
 
 def process_data(cur, conn, filepath, func):
     # get all files matching extension from directory
@@ -42,8 +76,8 @@ def main():
     conn = psycopg2.connect("host=localhost dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 
-    process_data(cur, conn, filepath='data/song_data', func=process_song_file)
-    # process_data(cur, conn, filepath='data/log_data', func=process_log_file)
+    # process_data(cur, conn, filepath='data/song_data', func=process_song_file)
+    process_data(cur, conn, filepath='data/log_data', func=process_log_file)
 
     conn.close()
 

@@ -11,7 +11,7 @@ time_table_drop = "DROP TABLE IF EXISTS time"
 songplay_table_create = ("""
 CREATE TABLE IF NOT EXISTS songplays (
 songplay_id CHAR(18),
-start_time TIMESTAMP,
+start_time BIGINT,
 user_id SMALLINT,
 level CHAR(4),
 song_id CHAR(18),
@@ -54,12 +54,12 @@ longitude NUMERIC
 
 time_table_create = ("""
 CREATE TABLE IF NOT EXISTS time (
-start_time TIMESTAMP,
+start_time BIGINT,
 hour SMALLINT,
 day SMALLINT,
 week  SMALLINT,
 year SMALLINT,
-weekday VARCHAR(9)
+weekday SMALLINT
 )
 """)
 
