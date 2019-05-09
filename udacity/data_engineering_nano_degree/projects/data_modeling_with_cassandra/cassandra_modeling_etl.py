@@ -13,7 +13,7 @@ def execute_music_session_length_query(session):
     try:
         query = """
           SELECT artist, song, length FROM udacity.music_session_length
-          WHERE sessionId = 338 AND itemInSession = 4
+          WHERE itemInSession = 4 AND sessionId = 338
         """
 
         rows = session.execute(query)
@@ -33,14 +33,33 @@ def execute_music_session_artist_query(session):
         rows = session.execute(query)
 
         for row in rows:
-            print(row.artist + " " + row.song + " " + str(row.length))
-    except Exception  as e:
+            print(row.artist + " " + row.song + " " + row.firstname + " " + row.lastname)
+    except Exception as e:
         print(e)
 
 def get_music_session_length_query():
     ## TO-DO: Assign the INSERT statements into the `query` variable
     query = """
         INSERT INTO music_session_length(artist,
+                                         firstName,
+                                         gender,
+                                         itemInSession,
+                                         lastName,
+                                         length,
+                                         level,
+                                         location,
+                                         sessionId,
+                                         song,
+                                         userId)
+        VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """
+
+    return query
+
+def get_music_session_artist_query():
+    ## TO-DO: Assign the INSERT statements into the `query` variable
+    query = """
+        INSERT INTO music_session_artist(artist,
                                          firstName,
                                          gender,
                                          itemInSession,
@@ -141,7 +160,7 @@ def setup_database():
                                                   sessionId int,
                                                   song text,
                                                   userId int,
-                                                  PRIMARY KEY(itemInSession, userId, sessionId)))
+                                                  PRIMARY KEY((userId, sessionId), itemInSession))
                                         """
     create_table_music_session_user = """
 
@@ -226,15 +245,17 @@ def stage_data():
 
 stage_data()
 cluster, session = setup_database()
-music_session_length_query = get_music_session_length_query()
+
 
 # Session Length Data Query
+# music_session_length_query = get_music_session_length_query()
 # load_data(session, music_session_length_query)
 # verify_data_load(session, "music_session_length")
 # execute_music_session_length_query(session)
 
 # Session Aritist Data Query
-load_data(session, music_session_length_query)
+music_session_arist_query = get_music_session_artist_query()
+load_data(session, music_session_arist_query)
 verify_data_load(session, "music_session_artist")
 execute_music_session_artist_query(session)
 
