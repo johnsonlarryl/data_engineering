@@ -37,8 +37,21 @@ def execute_music_session_artist_query(session):
     except Exception as e:
         print(e)
 
+def execute_music_session_user_query(session):
+    try:
+        query = """
+          SELECT firstName, lastName FROM udacity.music_session_user
+          WHERE song = 'All Hands Against His Own'
+        """
+
+        rows = session.execute(query)
+
+        for row in rows:
+            print(row.firstname + " " + row.lastname)
+    except Exception as e:
+        print(e)
+
 def get_music_session_length_query():
-    ## TO-DO: Assign the INSERT statements into the `query` variable
     query = """
         INSERT INTO music_session_length(artist,
                                          firstName,
@@ -57,7 +70,6 @@ def get_music_session_length_query():
     return query
 
 def get_music_session_artist_query():
-    ## TO-DO: Assign the INSERT statements into the `query` variable
     query = """
         INSERT INTO music_session_artist(artist,
                                          firstName,
@@ -70,6 +82,24 @@ def get_music_session_artist_query():
                                          sessionId,
                                          song,
                                          userId)
+        VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """
+
+    return query
+
+def get_music_session_user_query():
+    query = """
+        INSERT INTO music_session_user(artist,
+                                       firstName,
+                                       gender,
+                                       itemInSession,
+                                       lastName,
+                                       length,
+                                       level,
+                                       location,
+                                       sessionId,
+                                       song,
+                                       userId)
         VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
@@ -161,10 +191,25 @@ def setup_database():
                                                   song text,
                                                   userId int,
                                                   PRIMARY KEY((userId, sessionId), itemInSession))
-                                        """
-    create_table_music_session_user = """
+    """
 
-                                      """
+    create_table_music_session_user = """
+        CREATE TABLE udacity.music_session_user(artist text,
+                                                firstName text,
+                                                gender text,
+                                                itemInSession int,
+                                                lastName text,
+                                                length float,
+                                                level text,
+                                                location text,
+                                                sessionId int,
+                                                song text,
+                                                userId int,
+                                                PRIMARY KEY((userId, song)))
+    """
+    create_index_music_session_user = """
+      CREATE INDEX ON udacity.music_session_user(song);
+    """
 
     try:
         # This should make a connection to a Cassandra instance your local machine
@@ -185,6 +230,9 @@ def setup_database():
         session.execute(drop_table_music_session_user)
         session.execute(create_table_music_session_length)
         session.execute(create_table_music_session_artist)
+        session.execute(create_table_music_session_user)
+        session.execute(create_index_music_session_user)
+
         return (cluster, session)
     except Exception as e:
         print(e)
@@ -253,11 +301,17 @@ cluster, session = setup_database()
 # verify_data_load(session, "music_session_length")
 # execute_music_session_length_query(session)
 
-# Session Aritist Data Query
-music_session_arist_query = get_music_session_artist_query()
-load_data(session, music_session_arist_query)
-verify_data_load(session, "music_session_artist")
-execute_music_session_artist_query(session)
+# Session Artist Data Query
+# music_session_arist_query = get_music_session_artist_query()
+# load_data(session, music_session_arist_query)
+# verify_data_load(session, "music_session_artist")
+# execute_music_session_artist_query(session)
+
+# Session User Query
+music_session_user_query = get_music_session_user_query()
+load_data(session, music_session_user_query)
+verify_data_load(session, "music_session_user")
+execute_music_session_user_query(session)
 
 shutdown(cluster, session)
 
