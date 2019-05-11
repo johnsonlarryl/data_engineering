@@ -1,11 +1,6 @@
 # Import Python packages
-import pandas as pd
-import cassandra
-import re
 import os
 import glob
-import numpy as np
-import json
 import csv
 from cassandra.cluster import Cluster
 
@@ -296,16 +291,16 @@ cluster, session = setup_database()
 
 
 # Session Length Data Query
-# music_session_length_query = get_music_session_length_query()
-# load_data(session, music_session_length_query)
-# verify_data_load(session, "music_session_length")
-# execute_music_session_length_query(session)
+music_session_length_query = get_music_session_length_query()
+load_data(session, music_session_length_query)
+verify_data_load(session, "music_session_length")
+execute_music_session_length_query(session)
 
 # Session Artist Data Query
-# music_session_arist_query = get_music_session_artist_query()
-# load_data(session, music_session_arist_query)
-# verify_data_load(session, "music_session_artist")
-# execute_music_session_artist_query(session)
+music_session_arist_query = get_music_session_artist_query()
+load_data(session, music_session_arist_query)
+verify_data_load(session, "music_session_artist")
+execute_music_session_artist_query(session)
 
 # Session User Query
 music_session_user_query = get_music_session_user_query()
