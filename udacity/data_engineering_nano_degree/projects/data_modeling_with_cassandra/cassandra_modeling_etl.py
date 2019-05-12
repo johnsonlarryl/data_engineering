@@ -200,10 +200,7 @@ def setup_database():
                                                 sessionId int,
                                                 song text,
                                                 userId int,
-                                                PRIMARY KEY((userId, song)))
-    """
-    create_index_music_session_user = """
-      CREATE INDEX ON udacity.music_session_user(song);
+                                                PRIMARY KEY((song), userId))
     """
 
     try:
@@ -226,7 +223,6 @@ def setup_database():
         session.execute(create_table_music_session_length)
         session.execute(create_table_music_session_artist)
         session.execute(create_table_music_session_user)
-        session.execute(create_index_music_session_user)
 
         return (cluster, session)
     except Exception as e:
